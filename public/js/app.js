@@ -15,8 +15,6 @@ weatherForm.addEventListener('submit', (e) => {
 
 })
 
-
-
 function postponed() {
     let allow = true;
     return function (location) {
