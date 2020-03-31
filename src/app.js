@@ -4,7 +4,9 @@ const hbs = require('hbs')
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
+
 const app = express()
+const port = process.env.PORT || 3000
 
 // Define path for exrpress cfg
 const publicDirectoryPath = path.join(__dirname, '../public');
@@ -100,6 +102,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3001, () => {
-    console.log('Server started.');
+app.listen(port, () => {
+    console.log('Server started on port' + port);
 })
