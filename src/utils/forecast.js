@@ -8,7 +8,7 @@ const forecast = (latitude, longitude, cb) => {
         } else if (body.error) {
             cb('Unable to find location!');
         } else {
-            cb(undefined, `${body.daily.data[0].summary} It is currently ${body.currently.temperature} degrees out. There is a ${body.currently.precipProbability}% of rain`);
+            cb(undefined, `${body.daily.data[0].summary} It is currently ${body.currently.temperature} degrees out. There is a ${body.currently.precipProbability}% of rain. The minimum temperature is ${body.daily[0].temperatureLow}, while the maximum is ${temperatureHigh}. The wind speed is ${body.currently.windSpeed}. And the pressure is ${body.currently.pressure}`);
         }
     })
 }
